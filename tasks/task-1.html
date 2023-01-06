@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+  </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -24,21 +34,30 @@
       <p class="block">
         Wir müssen jedoch dem Dokument sagen, dass wir externe Dateien verwenden.
         Für CSS-Styles können wir im head auf die Datei verweisen.
-        Der head-Tag beinhaltet Metainformationen, welche für den Computer, aber nicht Menschen wichtg sind.
-        TODO: CODE
+        Der <code class="language-html">&lt;head&gt;</code>-Tag beinhaltet Metainformationen, welche für den Computer, aber nicht Menschen wichtig sind.
+        <pre>
+<code class="language-html">&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+</code></pre>
         Script-Dateien werden jedoch für gewöhnlich am Ende des body-Tags eingebunden.
-        TODO: CODE
-      </p>
+        <pre>
+<code class="language-html">  ...
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
     </div>
   </section>
   <section class="section px-3 py-2">
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Wir haben dir deshalb bereits zwei Dateien erstellt styles.css, für die CSS-Styles, und script.js, für den JavaScript-Code.
-            Beide Dateien liegen im selben Ordner wie index.html.<br>
-            Binde die beiden Dateien ein.<br>
-            Falls du alles richtig gemacht hast, sollte der Hintergrund rot werden und eine Meldung mit Hallo auf dem Bildschirm erscheinen.<br>
+            Wir haben dir deshalb bereits zwei Dateien erstellt <span class="is-family-code">styles.css</span>, für die CSS-Styles, und <span class="is-family-code">script.js</span>, für den JavaScript-Code.
+            Beide Dateien liegen im selben Ordner wie <span class="is-family-code">index.html</span>.
+            <ol>
+              <li>Binde die beiden Dateien ein.</li>
+            </ol>
+            Falls du alles richtig gemacht hast, sollte der Hintergrund rot werden und eine Meldung mit Hallo auf dem Bildschirm erscheinen.
             Du kannst danach den Inhalt aus beiden Dateien löschen.
         </p>
     </div>
