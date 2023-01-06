@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section px-3 py-2 pt-5">
+    <div class="container">
+      <h1 class="title is-3 mb-3">
+        Layout
+      </h1>
+      <p class="block">
+        Das Layout einer Webseite beschäftigt sich unter anderem damit, wie einzelne Bilder, Texte, usw. angeordnet sind.<br>
+        Mithilfe von CSS kannst du das Layout deiner Webseite nahezu komplett bestimmen.
+        Leider ist dies nicht immer so einfach und nachvollziehbar.
+      </p>
+      <p class="block">
+        Was früher sehr aufwendig war, geht mittlerweile doch etwas leichter von der Hand mithilfe des <strong>Flexbox</strong> Layouts.
+        Dies ermöglicht es dir, flexibler Sachen zu platzieren und kann mithilfe von TODO aktiviert werden.
+        Ist ein Element nun flex, kannst du die Elemente, welche sich direkt in diesem Befinden, die sogentannten Kinder, mit einfachen Befehlen herumschiebe.
+        Das Element, welches flex ist, nennt man häufig auch <em>Container</em>, da es die Kinder umschließt und diese sich innerhalb des Containers bewegen können.
+        Als Analgoie kannst du dir einen Schiffcontainer vorstellen, wo du festlegen kannst wie du die Ware darin stabelst.
+      </p>
+      <p class="block">
+        Ist der Container nun flex, kannst du beispielweise mit TODO bestimmen, wie viel Platz jedes der Kinder innerhalb des Containers einnehmen soll.
+        So kannst du beispielsweise mit
+        TODO code
+        festlegen, dass jedes der fünf Kinder 20%, also ein fünftel, des verfügbaren Platzes für sich beanspruchen kann.
+        Besonders praktisch ist auch diese Kombination.
+        Es zentriert ein Element, hier div, mittig im flex-container.
+        <strong>Hinweis:</strong> div sind besondere Elemente. Sie bringen für sich gesehen keinen Mehrwehrt zu HTML, da man sie auf der WEbseite nicht sieht und sie keine eigene Funktion haben.
+        Jedoch bringen sie Struktur in deine Webseite. Du kannst eines oder mehrere Elemente, wie beispielsweise einen Block Text, damit gruppieren und mittels CSS den Style des gesamten Blocks anpassen.
+        Es gibt auch noch span, welches die gleiche Wirkung wie div hat. Während div meist für größere Blöcke verwendet wird, verwendet man hingegen span eher für einzelne Wörter.
+      </p>
+    </div>
+  </section>
+  <section class="section px-3 py-2">
+    <div class="container">
+        <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
+        <p class="block">
+            In der Section zur Zubereitung findest du bereits eine korrekte Gruppierung der Elemente mittels div.
+            Mache das äußerste div in dieser Section zu einem flex-container.
+            Die beiden inneren div sollen jeweils 50% des Platzes einnehmen.
+            Das div, welches das Bild umschließt, soll auch zu einem Flex-container werden.
+            Zentriere mit dessen Hilfe das Bild des Pizzaofens.
+
+      </p>
+    </div>
+  </section>
+  </body>
+</html>

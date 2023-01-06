@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Schleifen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section px-3 py-2 pt-5">
+    <div class="container">
+      <h1 class="title is-3 mb-3">
+        JS: Schleifen
+      </h1>
+      <p class="block">
+        Wir wollen nun jene Zutaten auslesen, welche angeklickt sind.
+        Dazu verwenden wir eine <strong>Schleife</strong>.
+        Schleifen können dazu verwendet werden, gewissen Code mehrmals auszuführen.
+        Ein typisches Beispiel wäre hierfür das Ausführen eines Codes für jedes Element einer Liste.
+        Schleifen sind folgendermaßen aufgebaut.
+        TODO Code
+        Mit TODO erstellen wir eine Variable.
+        Diese Variable wird im Laufe der Zeit jedes Element der Liste [1,5,10,0] genau einmal repräsentieren.
+        Man spricht hierbei auch von "über die Liste <em>iterieren</em>".
+        In diesem Beispiel wird nur die Summe der Elemente gebildet; es kann jedoch jeder beliebige Code innerhalb der Schleife sein.
+      </p>
+      <p class="block">
+        Du hast bereits Variablen kennengelernt.
+        Variablen können von verschiedenen Datentypen sein, je nachdem was sie repräsentieren sollen.
+        Beispiele hierfür sind Zahlen, oder Zeichenketten, sogenannte <strong>Strings</strong>.
+        Wir werden in dieser und den folgenden Aufgaben viel mit Strings arbeiten.
+        Diese speichern Zeichenketten, also einfach Text und können so erstellt werden (achte auf die "").
+        Wie du oben sehen kannst, kann man auch zwei Strings mittels des + anneinander reihen, so wie wenn du zwei Zahlen addieren würdest.
+      </p>
+      <p class="block">
+        Eine weitere Möglichkeit etwas zu selektieren ist mittels CSS-Selektoren.
+        Du hast im CSS-Teil schon einige Selektoren geschrieben, welche gewisse Elemente auswählen und ihr Aussehen verändern.
+        Dies wäre beispielsweise ein Selektor, der alle h2-Überschriften mit der Klasse "untertitel" auswählt.
+        TODO CODE
+        Mit dem Selektor TODO kannst du solche CSS Selektoren auch in JS verwenden.
+        Dieser Befehl wählt alle Elemente aus, welche in dieses Muster fallen.
+        Dies können, im Gegensatz zu TODO, auch mehrere sein.
+        Deshalb wird dir auch eine Liste mit Elementen zurückgegeben, über welche du dann mit einer Schleife iterieren kannst.
+        Der Code für den oben angegebenen CSS-Selektor würde so ausschauen.
+      </p>
+    </div>
+  </section>
+  <section class="section px-3 py-2">
+    <div class="container">
+        <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
+        <p class="block">
+            Erstelle eine Textvariable zutaten.
+            Selektiere von der Webseite alle Checkboxen die ausgewählt (markiert) wurden. Dies kannst du mittels input[type=checkbox]:checked machen.
+            Speicher dir diese Elemente in der Variable zutatenBoxen.
+            Für jedes dieser Elemente in zutatenBoxen, hänge deren Namen an den String zutaten dran.
+            Auf den Namen der Zutat zutat kannst du mittels zutat.name zugreifen.
+            Zwischen den Strings kannst du jeweils die Zeichenkette ", " dazuhängen, damit es leserlich bleibt.
+            Bisher wurde ja beim Klick auf den Knopf der Titel der Pizza ausgegeben.
+            Nun soll "Pizza NAME; Zutaten: ZUTATEN." ausgegeben werden.
+      </p>
+    </div>
+  </section>
+  </body>
+</html>

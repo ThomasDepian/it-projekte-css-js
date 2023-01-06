@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bonus: Responsive Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  <section class="section px-3 py-2 pt-5">
+    <div class="container">
+      <h1 class="title is-3 mb-3">
+        Bonus: Responsive Design
+      </h1>
+      <p class="block">
+        Wir verbringen immer mehr und mehr Zeit vor unseren Smartphones. <strong>Responsive Design</strong> wird daher immer wichtiger.<br>
+        Responsive Design hat sich zum Ziel gesetzt, dass sich das Layout der Webseite dem Gerät, auf welchem sie betrachtet wird, anpasst.<br>
+        Während beispielsweise zwei Spalten nebeneinander auf dem Laptop angezeigt werden, so sind diese auf dem Smartphone untereinander.
+      </p>
+      <p class="block">
+        Eine Möglichkeit, wie man das erreichen kann, sind sogenannte <strong>Media Queries</strong>.
+        Schauen wir uns zuerst ein Beispiel an.
+        TODO CODE
+        Diese Media Query fungiert wie ein "if" in einer Programmiersprache.
+        Falls die Bedingung oben erfüllt ist, hier, dass die Größe maximal 500 Pixel beträgt, so werden <em>zusätzlich</em> noch die angegebenen Regeln angewendent, hier beispielsweise eine Überschrift rot gefärbt.
+        Die Regeln unten greifen beispielsweise nur, falls die Bildschirmbreite mindestens 600 Pixel beträgt.
+        TODO CODE
+      </p>
+      <p class="block">
+        Wie du dir denken kannst, ist dies nicht sehr praktikabel. 
+        Deshalb gibt es seit kurzem das sogenannte <strong>Grid Layout</strong>.
+        Es ist eine alternative zu dem flexbox was wir zuvor gesehen haben und ermöglicht dir, Elemente in einem Grid anzuordnen.
+        Dies kannst du dir wie eine Tabelle vorstellen und wird so verwendent.
+        Mit der Regel display grid schalten wir das Grid-Layout auf dem Container-Element ein.
+        gap: 10px legt den Abstand zwischen den Zellen des Grids fest. Dies kannst du dir als den Abstand zwischen den Kindelementen vorstellen.
+        Schließlich können wir grid-template-columns: 10px 1fr 1fr das Layout der Spalten festlegen.
+        Dies legt beispielsweise fest, dass es drei Spalten geben soll: Die erste ist 100 Pixel breit, und der verbleibende Platz wird auf zwei weitere Spalten aufgeteilt (1fr legt dies fest).
+      </p>
+    </div>
+  </section>
+  <section class="section px-3 py-2">
+    <div class="container">
+        <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
+        <p class="block">
+            Falls die Bilschirmbreite unter 1200 Pixeln ist (also maximal 1200 Pixel beträgt), so soll es eine zusätzliche Regel geben, die die Höhe des Bildes mit dem Steinofen reguliert (Verwende hierfür height auto).<br>
+            Im Abschnitt zu den Fakten (Fakten zu Pizza) haben wir wieder einige divs vorbereiten. 
+            Das erste div soll nun ein Grid werden, wobei der Abstand zwischen den einzelnen Elementen 1em beträgt.
+            Damit das Grid auch gut zur geltung kommt, soll die Breite des Grids (width) 100% betragen.
+            Für das Layout der Spalten setze: "repeat(auto-fit, minmax(380px, 1fr))". Dies erzeugt so viele Spalten und Zeilen wie notwendig - abhängig von der Anzahl der Elemente und des verfügbaren Platzes.
+            Jede Spalte besizt somit auch mindestens eine Breite von 380 Pixeln.
+            Füge noch justify-items: center; hinzu. Mit diesem Befehl werden die einzelne Elemente zentriert, was auf großen Bildschirmen besser zur geltung kommt.
+      </p>
+    </div>
+  </section>
+  </body>
+</html>
