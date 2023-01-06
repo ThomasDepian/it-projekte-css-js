@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Schriftfarbe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
   <body>
   <section class="section px-3 py-2 pt-5">
@@ -14,9 +24,8 @@
       </h1>
       <p class="block">
         Wie du vielleicht bemerkt hast, ist der Titel der Webseite nun nur noch schwer zu lesen. Deshalb wollen wir nun die Schriftfarbe ändern.
-        Dies kannst du folgendermaßen machen.
-        TODO
-        Anstatt der Farbe TODO, kannst du auch all jenes angeben, was du bereits bei der Hintergrundfarbe gesehen hast.
+        Um die Schriftfarbe eines Elementes zu verändern, verwende <code class="language-css">color: red;</code>.
+        Anstatt der Farbe <code class="language-css">red</code>, kannst du auch all jenes angeben, was du bereits bei der Hintergrundfarbe gesehen hast.
       </p>
     </div>
   </section>
@@ -24,7 +33,7 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Ändere die Schriftfarbe des Titels "Pizza" (h1-Element) auf weiß.
+            Ändere die Schriftfarbe des Titels <code class="language-plaintext">Pizza</code> (<code class="language-html">&lt;h1&gt;</code>-Element) auf weiß (<code class="language-css">white</code>).
         </p>
     </div>
   </section>
