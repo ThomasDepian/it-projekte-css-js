@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alles zusammen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -16,7 +26,7 @@
         Du hast bereits heute viel gelernt und kannst stolz auf dich sein! Bravo &#128516;
       </p>
       <p class="block">
-        Nutze nun dein wissen und style den Knopf (Button) ganz unten auf der Webseite - er sieht schon langweilig aus so.
+        Nutze nun dein wissen und style den Knopf (<code class="language-html">&lt;button&gt;</code>) ganz unten auf der Webseite - er sieht schon langweilig aus so.
       </p>
     </div>
   </section>
@@ -24,22 +34,27 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Der Knopf (button) mit dem Text "Speichern" soll folgende Erscheinung haben.
-            <ul>
-              <li>Die Hintergrundfarbe ist weiß (white), die Schriftfarbe schwarz (black).</li>
-              <li>Der Rahmen ist eine zwei Pixel durchgezogene Linie in der Farbe #555555</li>
-              <li>Das Padding oben und unten soll 0.5em betragen, links und rechts soll es 3em sein.</li>
-              <li>Der Margin oben beträgt 1em</li>
-              <li>Der Knopf hat eine Breite (width) von 100%</li>
-              <li>Der Text soll zentriert ausgerichtet sein</li>
-              <li>Verwende text-decoration: none;, damit alle Unterstrichungen ets verschwinden.</li>
-            </ul>
-            Wenn du mit der Maus darüber fährst soll er sich folgendermaßen verändern.
-            <ul>
-              <li>Die Hintergrundfarbe wird nun #555555.</li>
-              <li>Als Schriftfarbe soll weiß (white) verwendet werden.</li>
-              <li></li>
-            </ul>
+          <ol>
+            <li>
+              Der Knopf (<code class="language-html">&lt;button&gt;</code>) mit dem Text <code class="language-plaintext">Speichern</code> soll folgende Erscheinung haben.
+              <ul>
+                <li>Die Hintergrundfarbe ist weiß (<code class="language-css">white</code>), die Schriftfarbe schwarz (<code class="language-css">black</code>).</li>
+                <li>Der Rahmen ist eine zwei Pixel durchgezogene Linie in der Farbe <code class="language-css">#555555</code>.</li>
+                <li>Das Padding oben und unten soll <code class="language-css">0.5em</code> betragen, links und rechts soll es <code class="language-css">3em</code> sein.</li>
+                <li>Der Margin oben beträgt <code class="language-css">1em</code>.</li>
+                <li>Der Knopf hat eine Breite (<code class="language-css">width</code>) von <code class="language-css">100%</code>.</li>
+                <li>Der Text soll zentriert ausgerichtet sein.</li>
+                <li>Verwende <code class="language-css">text-decoration: none;</code>, damit alle Unterstreichungen etc. verschwinden.</li>
+              </ul>
+            </li>
+            <li>
+              Wenn du mit der Maus darüber fährst soll er sich folgendermaßen verändern.
+              <ul>
+                <li>Die Hintergrundfarbe wird nun <code class="language-css">#555555</code>.</li>
+                <li>Als Schriftfarbe soll weiß (<code class="language-css">white</code>) verwendet werden.</li>
+              </ul>
+            </li>
+          </ol>
       </p>
     </div>
   </section>
