@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS: HTML Manipulation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -19,29 +29,39 @@
         Einerseits kann man Elemente im HTML Dokument auswählen.
         Dafür brauchen wir sogenannten <strong>Selektoren</strong>, welche wir in dieser und den kommenden Aufgaben kennenlernen werden.
         Ein Selektor wählt Elemente von der HTML-Seite anhand von gewissen Mustern aus.
-        TODO Code
-        Dieser Selektor wählt beispielsweise das Element aus, welches die ID titel hat.
-        Das ausgewählte Element wird in der Variable element gespeichert - der Variablenname kann aber von dir frei gewählt werden.
-        Er darf aber nicht Sonderzeichen (!?äö etc.) oder Leerzeichen beinhalten.
+        <pre><code class="language-javascript">let element = document.getElementById('titel');</code></pre>
+        Dieser Selektor wählt beispielsweise das Element aus, welches die ID <code class="language-plaintext">titel</code> hat.
+        Das ausgewählte Element wird in der Variable <code class="language-javascript">element</code> gespeichert - der Variablenname kann aber von dir frei gewählt werden.
+        Er darf aber nicht Sonderzeichen (<code class="language-plaintext">!?äö</code> etc.) oder Leerzeichen beinhalten.
       <p class="block">
         Haben wir Elemente ausgewählt, können wir deren Status abfragen oder auch manipulieren.
-        Um auf die Eigenschaften eines, in einer Variable gespeicherten, (HTML) Elementes zuzugreifen, benutzen wir die "."-Notation.<br>
-        Sei "variable" eine Variable die ein HTML Element beinhaltet und "eigenschaft" eine Eigenschaft des Elementes, so können wir so die Eigenschaft abfragen.
-        TODO code
-        Und so können wir der Eigenschaft einen neuen Wert zuweisen.
+        Um auf die Eigenschaften eines, in einer Variable gespeicherten, (HTML) Elementes zuzugreifen, benutzen wir die "."-Notation.
+        Sei <code class="language-javascript">element</code> die Variable von oben, welches ein HTML Element beinhaltet, und <code class="language-javascript">eigenschaft</code> eine Eigenschaft des Elementes, so können wir so die Eigenschaft abfragen.
+        <pre><code class="language-javascript">let wertVonEigenschaft = element.eigenschaft;</code></pre>
+        Und so können wir der Eigenschaft einen neuen Wert zuweisen:
+        <pre><code class="language-javascript">element.eigenschaft = neuerWert;</code></pre>
       </p>
       <p class="block">
         Wir können aber nicht nur bereits bestehende Elemente auswählen, sondern auch neue Elemente erzeugen.
-        Mit dem Befehl TODO erzeugen wir ein neues p-Element, sprich einen Absatz.
+        Mit dem Befehl <code class="language-javascript">document.createElement("p")</code> erzeugen wir ein neues <code class="language-html">&lt;p&gt;</code>-Element,
+        sprich einen Absatz.
         Dieses Element beinhaltet aber noch keinen Text.
-        Um diesen zu setzen, überschreiben wir die Eigenschaft "innerText":
-        TODO
+        Um diesen zu setzen, überschreiben wir die Eigenschaft <code class="language-javascript">innerText</code>:
+        <pre>
+<code class="language-javascript">let neuesElement = document.createElement("p");
+  neuesElement.innerText = "Hallo du!";
+</code></pre>
         Das Element existiert bis jetzt nur in der Variable, der Browser kennt es so noch nicht.
         Was wir aber machen können ist, das von uns erstellte Element an ein anderes Element dranhängen.
-        Dies machen wir mit dem Befehl ; z.B. so:
-        TODO
-        So wir das neue p-Element an das bereits bestehende div-Element hinten dran gehängt.
-        Wie du siehst haben wir eine Funktion aufgerufen, so wie du sie in der vorherigen Aufgabe erstellt hast.
+        Dies machen wir mit der Funktion <code class="language-javascript">appendChild()</code>; z.B. so:
+        <pre>
+<code class="language-javascript">let neuesElement = document.createElement("p");
+  neuesElement.innerText = "Hallo du!";
+  let element = document.getElementById('titel');
+  element.appendChild(neuesElement);
+</code></pre>
+        So wir das neue <code class="language-html">&lt;p&gt;</code>-Element an das bereits bestehende Element hinten dran gehängt.
+        Wie du siehst haben wir eine Funktion aufgerufen, so wie du sie in der vorherigen Aufgabe erstellt hast.<br>
         <strong>Achtung:</strong> Wenn du ein Element irgendwo dranhängst wird es zwar vom Browser erkannt, die HTML-Datei wird aber nicht verändert.
         Das bedeutet auch, dass beim Neuladen das erstellte Element nicht mehr vorhanden ist.
       </p>
@@ -51,15 +71,33 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-          Gib dem Eingabefeld für den Namen der Pizza eine ID, damit du es von JS aus selektieren kannst.
-          Erstelle im HTMl-Dokument unterhalb der Eingabeform (nach "<par></form></par>") ein div-Element mit einer ID.
-          Hier werden wir bei Knopfdruck was erzeugen.
-          Immer wenn auf den Knopf "Speichern" gedrückt wird, soll folgendes passieren.
-          Wähle das Eingabefeld aus und lese den Status "value" aus.
-          Dieser beinhaltet den aktuell in diesem Feld eingegebenen Text.
-          Erstelle ein p-Element und setze den Text (Status innerHTML) auf den Text im Eingabefeld.
-          Dieses p-Element soll im von dir zuvor erstellten div-Element hinten drangehängt werden.
-          Dazu musst du jedoch vorher das div-Element auswählen (selektieren).
+          <ol>
+            <li>Gib dem Eingabefeld für den Namen der Pizza eine ID, damit du es von JavaScript aus selektieren kannst.</li>
+            <li>
+              Erstelle im HTMl-Dokument unterhalb der Eingabeform (nach <code class="language-html">&lt;/form&gt;</code>) 
+              ein <code class="language-html">&lt;div&gt;</code>-Element mit einer ID.
+              Hier werden wir bei Knopfdruck was erzeugen.
+            </li>
+            <li>
+              Immer wenn auf den Knopf (<code class="language-html">&lt;button&gt;</code>) <code class="language-plaintext">&lt;Speichern&gt;</code> gedrückt wird,
+              soll folgendes passieren.
+            </li>
+            <ol>
+              <li>
+                Wähle (Selektiere) das Eingabefeld aus und lese den Status <code class="language-javascript">value</code> aus.
+                Dieser beinhaltet den aktuell in diesem Feld eingegebenen Text.
+              </li>
+              <li>
+                Erstelle ein <code class="language-html">&lt;p&gt;</code>-Element und setze den Text (Status <code class="language-javascript">innerHTML</code>) 
+                auf den Text im Eingabefeld.
+              </li>
+              <li>
+                Dieses <code class="language-html">&lt;p&gt;</code>-Element soll im von dir zuvor erstellten <code class="language-html">&lt;div&gt;</code>-Element hinten
+                drangehängt werden.
+                Dazu musst du jedoch vorher das <code class="language-html">&lt;div&gt;</code>-Element auswählen (selektieren).
+              </li>
+            </ol>            
+          </ol>
       </p>
     </div>
   </section>
