@@ -4,9 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zustandsänderungen der Elemente</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -14,13 +23,20 @@
       </h1>
       <p class="block">
         Jedes der HTML-Elemente kann in verschiedenen Zuständen sein.
-        Du kannst CSS-Regeln festlegen, welche nur dann angewendet werden, wenn das Element in dem von dir angegebenen Zustand ist.<br>
-        Vermutlich am häufigsten wird dabei der Zustand "hovert" verdendet.
-        Ein Element ist immer dann im Zustand hovert, wenn sich die Maus gerade über ihm befindet.
-        Eine CSS-Regel, welche nur in diesem Zustand greift kannst du folgendermaßen festlegen (TODO).
-        TODO
+        Du kannst CSS-Regeln festlegen, welche nur dann angewendet werden, wenn das Element in dem von dir angegebenen Zustand ist.
+        Vermutlich am häufigsten wird dabei der Zustand <code class="language-css">hover</code> verwendet.
+        Ein Element ist immer dann im Zustand <code class="language-css">hover</code>, wenn sich die Maus gerade über ihm befindet.
+        Eine CSS-Regel, welche nur in diesem Zustand greift kannst du folgendermaßen festlegen.
+        <pre>
+<code class="language-css">#hover-mich {
+  color: red;
+}
+#hover-mich:hover {
+  color: green;
+}
+</code></pre>
         Ist das Element nicht in diesem Zustand, greift die Regel nicht.
-        Dies würde bedeuten, dass im obigen Beispiel die Schriftfarbe des Elements mit der ID "hover-mich" solange rot ist, bis du mit der MAus drüber fährst; dann wird es grün.
+        Dies würde bedeuten, dass im obigen Beispiel die Schriftfarbe des Elements mit der ID <code class="language-plaintext">hover-mich</code> solange rot ist, bis du mit der Maus drüber fährst; dann wird es grün.
       </p>
     </div>
   </section>
@@ -28,21 +44,26 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Der Link, welcher zum Kuppelofen führt, soll standardmäßig folgenden Stil aufweisen.
-            TODO
-            color: initial;
-    text-decoration: underline;
-    Wenn man mit der Maus drüber fährt, soll er folgendermaßen ausschauen.
-    font-weight: 900;
-        </p>
-        <p class="block">
+          <ol>
+            <li>
+              Der Link, welcher zum Kuppelofen führt, soll standardmäßig folgenden Stil aufweisen.
+              <pre>
+<code class="language-css">color: initial;
+text-decoration: underline;
+</code></pre>
+            </li>
+            <li>
+              Wenn man mit der Maus drüber fährt, soll er folgendermaßen ausschauen.
+              <pre><code class="language-css">font-weight: 900;</code></pre>
+            </li>
+          </ol>
           <strong>Hinweis:</strong>
-          Wir haben nicht alle der oben verwendeten Regeln kennengelernt. "inital" ist eine vordefinerte Anweisung, welche besagt, dass der ursprüngliche Wert für die Regel verwendet werden soll.
-          Dies bedeutet in diesem Fall konkret, dass die blaue Schrift, welche standardmäßig vom Browser erzeugt wird, ignoriert werden soll, und der Link, wie der restrliche Text, schwarz dargestellt wird.
-          Mit "text-decoration" kann das Erscheinungsbild des Textes weiter verändert werden. "underline" legt hier beispielsweise fest, dass der Text unterstrichen werden soll.
-          font-weight: 900 kommt dir vielleicht bekannt vor. Mit dem kannst du nachträglich den Stil (oder besser gesagt die dicke) der Schriftart ändern.
+          Wir haben nicht alle der oben verwendeten Regeln kennengelernt. <code class="language-css">inital</code> ist eine vordefinierte Anweisung, welche besagt, dass der ursprüngliche Wert für die Regel verwendet werden soll.
+          Dies bedeutet in diesem Fall konkret, dass die blaue Schrift, welche standardmäßig vom Browser erzeugt wird, ignoriert werden soll, und der Link, wie der restliche Text, schwarz dargestellt wird.
+          Mit <code class="language-css">text-decoration</code> kann das Erscheinungsbild des Textes weiter verändert werden. <code class="language-css">underline</code> legt hier beispielsweise fest, dass der Text unterstrichen werden soll.
+          <code class="language-css">font-weight: 900</code> kommt dir vielleicht bekannt vor. Mit dem kannst du nachträglich den Stil (oder besser gesagt die dicke) der Schriftart ändern.
           Wir haben dies auf der Webseite von Google Fonts bereits gesehen.
-      </p>
+        </p>
     </div>
   </section>
   </body>
