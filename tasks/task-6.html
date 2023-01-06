@@ -5,28 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hintergrundbild</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
         Hintergrundbild
       </h1>
       <p class="block">
-        Als nächstes wollen wir ein Hintergrundbild zu einem Block hinzufügen.<br>
+        Als nächstes wollen wir ein Hintergrundbild zu einem Block hinzufügen.
         Die Syntax des Styles ist hier ähnlich wie bei der Hintergrundfarbe. Wir können dies so machen.
-        TODO CODE
-        Innerhalb von url geben wir den Pfad zum Bild an, ähnlich wie du es bereits bei Bildern auf der Webseite gemacht hast.
+        <pre>
+<code class="language-css">div {
+  background-image: url("https://bilder.com/hintergrund-bild.png");
+}
+</code></pre>
+        Innerhalb von <code class="language-css">url</code> geben wir den Pfad zum Bild an, ähnlich wie du es bereits bei Bildern auf der Webseite gemacht hast.
       </p>
       <p class="block">
-        Der obrige Code ist jedoch in den meisten Fällen nicht ausreichend, da er das Hintergrundbild nur "irgendwie" setzt.
-        Um beispielsweise das Hintergrundbild mittig im Block zu platzieren, schreiben wir TODO. Anstatt TODO können wir auch andere Werte, wie beispielsweise TODO einsetzen.<br>
+        Der obige Code ist jedoch in den meisten Fällen nicht ausreichend, da er das Hintergrundbild nur "irgendwie" setzt.
+        Um beispielsweise das Hintergrundbild mittig im Block zu platzieren, schreiben wir <code class="language-css">background-position: center;</code>. Anstatt <code class="language-css">center</code> können wir auch andere Werte, wie beispielsweise <code class="language-css">top</code> einsetzen.
         Falls das Hintergrundbild zu klein ist, um den gesamten Block auszufüllen, so können wir festlegen, dass es öfters nebeneinander gereiht werden soll, um den gesamten Block zu füllen.
-        Dies wird bei uns nicht notwendig sein, und wir können dies mit TODO unterbinden. Dies hat aber den Nachteil, dass das Hintergrundbild nicht den gesamten Block ausfüllt.
-        Wir können jedoch mit TODO festlegen, dass das Bild so vergrößert werden soll, damit es den ganzen Block ausfüllt.<br>
-        <strong>Beachte:</strong> Um das Bild nicht zu verzerren, werden die Seitenverhältnisse des Bildes beibehalten. Dies kann zur Folge haben, dass nicht das gesamte Bild sichtbar ist.<br>
-        Folgender Code würde beispielsweise für das Element mit der ID TODO das Hintergrundbild TODO setzen. Dies bedeckt das gesamte Element, wird zentriert und nicht wiederholt.
-        TODO CODE.
+        Dies wird bei uns nicht notwendig sein, und wir können dies mit <code class="language-css">background-repeat: no-repeat;</code> unterbinden.
+        Dies hat aber den Nachteil, dass das Hintergrundbild nicht den gesamten Block ausfüllt.
+        Wir können jedoch mit <code class="language-css">background-size: cover;</code> festlegen, dass das Bild so vergrößert werden soll, damit es den ganzen Block ausfüllt.<br>
+        <strong>Beachte:</strong> Um das Bild nicht zu verzerren, werden die Seitenverhältnisse des Bildes beibehalten. Dies kann zur Folge haben, dass nicht das gesamte Bild sichtbar ist.
+        Folgender Code würde beispielsweise für das Element mit der ID <code class="language-plaintext">katzen</code> <a href="https://upload.wikimedia.org/wikipedia/commons/5/59/Seal-tortie.jpg" target="_blank">dieses</a> Hintergrundbild setzen.
+        Dies bedeckt das gesamte Element, wird zentriert und nicht wiederholt.
+        <pre>
+<code class="language-css">#katzen {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/59/Seal-tortie.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</code></pre>
       </p>
     </div>
   </section>
@@ -34,14 +57,13 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Bitte gib der Section, welche den Titel "PIZZA" enthält, folgendes Hintergrundbild.
-            TODO.
-            Es soll dabei zentriert sein und das gesamte Element bedecken. Für TODO, gebe bitte TODO ein.
-            Damit das Bild gut zur geltung kommt, setze bitte noch TODO auf 0 in dieser Section.
+          <ol>
+            <li>Bitte gib der Section, welche den Titel <code class="language-plaintext">Pizza</code> enthält, folgendes Hintergrundbild: <code class="language-plaintext">https://cdn.pixabay.com/photo/2018/04/11/03/13/food-3309419_960_720.jpg</code>.</li>
+            <li>Es soll dabei zentriert sein und das gesamte Element bedecken. Für <code class="language-css">background-repeat</code>, gebe bitte <code class="language-css">no-repeat</code> ein.</li>
+            <li>Damit das Bild gut zur Geltung kommt, setze bitte noch <code class="language-css">padding</code> auf <code class="language-plaintext">0</code> in dieser Section.</li>
+          </ol>
+          Wenn du willst kannst du noch mit anderen Werten für <code class="language-css">background-position</code>, <code class="language-css">background-repeat</code>, oder auch <code class="language-css">background-size</code> experimentieren.
         </p>
-        <p class="block">
-          Wenn du willst kannst du noch mit anderen Werten für TODO, TODO, oder auch TODO experimenteren.
-      </p>
     </div>
   </section>
   </body>
