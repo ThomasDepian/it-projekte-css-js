@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hintergrundfarbe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -14,13 +24,17 @@
       </h1>
       <p class="block">
         Wir wollen nun die Hintergrundfarbe der Webseite ändern.
-        Dies kannst du mittels des Attributs "background-color" machen, z.B. so:
-        TODO: CODE
-        Vielleicht errinerst du dich noch daran, dass wir in CSS im wesentlichen drei "große" Möglichkeiten haben, wie wir Farben angeben können.
+        Dies kannst du mittels des Attributs <code class="language-css">background-color</code> machen, z.B. so:
+        <pre>
+<code class="language-css">p {
+  background-color: red;
+}
+</code></pre>
+        Vielleicht erinnerst du dich noch daran, dass wir in CSS im wesentlichen drei "große" Möglichkeiten haben, wie wir Farben angeben können.
         <ul>
-          <li>Als sogenannter HEX-Code, z.B.: TODO</li>
-          <li>Den Rot, Grün, und Blau-Anteil, sowie die Transparenz individuell angeben, z.B.: TODO</li>
-          <li>Eine vordefinierte Farbei auswählen, z.B.: TODO</li>
+          <li>Als sogenannter HEX-Code, z.B.: <code class="language-css">#F631AB</code></li>
+          <li>Den Rot, Grün, und Blau-Anteil, sowie die Transparenz individuell angeben, z.B.: <code class="language-css">rgba(120, 64, 13, 0.1)</code></li>
+          <li>Eine vordefinierte Farbei auswählen, z.B.: <code class="language-css">green</code></li>
         </ul>
       </p>
     </div>
@@ -29,17 +43,19 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Bitte gib den einzelnen Elementen folgende Hintergrundfarben:
-            <ul>
-              <li>Das gesamte Dokument soll rot: 109, grün: 76 und blau: 65 sein. Die TRansparenz soll bitte 0.1 sein..</li>
-              <li>Die section mit der Überschrift "Zubereitung" soll die Farbe "aliceblue" haben.</li>
-              <li>Die section mit der Überschrift "Fakten zu Pizza" soll die Farbe "#f8fff6" haben.</li>
-              <li>Die section mit der Überschrift "Erstelle deine eigene Pizza!" soll die Farbe 245,128,146 (r,g,b) mit einer TRansparenz von 0.1 aufweisen.</li>
-            </ul>
+            <ol>
+              <li>
+                Bitte gib den einzelnen Elementen folgende Hintergrundfarben:
+                <ul>
+                  <li>Das gesamte Dokument (<code class="language-html">&lt;body&gt;</code>) soll <code class="language-plaintext">rot: 109</code>, <code class="language-plaintext">grün: 76</code> und <code class="language-plaintext">blau: 65</code> sein. Die Transparenz soll bitte <code class="language-plaintext">0.1</code> sein..</li>
+                  <li>Die <code class="language-html">&lt;section&gt;</code> mit der Überschrift <code class="language-plaintext">Zubereitung</code> soll die Farbe <code class="language-css">aliceblue</code> haben.</li>
+                  <li>Die <code class="language-html">&lt;section&gt;</code> mit der Überschrift <code class="language-plaintext">Fakten zu Pizza</code> soll die Farbe <code class="language-css">#f8fff6</code> haben.</li>
+                  <li>Die <code class="language-html">&lt;section&gt;</code> mit der Überschrift <code class="language-plaintext">Erstelle deine eigene Pizza!</code> soll die Farbe <code class="language-plaintext">245,128,146</code> (r,g,b) mit einer Transparenz von <code class="language-plaintext">0.1</code> aufweisen.</li>
+                </ul>
+              </li>
+            </ol>
+            <strong>Hinweis:</strong> Jede <code class="language-html">&lt;section&gt;</code> soll eine andere Farbe haben; vielleicht brauchen wir etwas um einzelne <code class="language-html">&lt;section&gt;</code>-Elemente in der HTML-Datei zu unterscheiden?
         </p>
-        <p class="block">
-          <strong>Hinweis:</strong> Jede section soll eine andere Farbe haben; vielleicht brauchen wir etwas um einzelne section-Elemente in der HTML-Datei zu unterscheiden?
-      </p>
     </div>
   </section>
   </body>
