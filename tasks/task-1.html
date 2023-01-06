@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hi</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./task-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
@@ -14,7 +14,7 @@
           hljs.highlightElement(el);
         });
       });
-  </script>
+    </script>
   </head>
   <body class="content">
   <section class="section px-3 py-2 pt-5">
@@ -35,14 +35,12 @@
         Wir müssen jedoch dem Dokument sagen, dass wir externe Dateien verwenden.
         Für CSS-Styles können wir im head auf die Datei verweisen.
         Der <code class="language-html">&lt;head&gt;</code>-Tag beinhaltet Metainformationen, welche für den Computer, aber nicht Menschen wichtig sind.
-        <pre>
-<code class="language-html">&lt;head&gt;
+        <pre><code class="language-html">&lt;head&gt;
   &lt;link rel="stylesheet" href="styles.css"&gt;
 &lt;/head&gt;
 </code></pre>
         Script-Dateien werden jedoch für gewöhnlich am Ende des body-Tags eingebunden.
-        <pre>
-<code class="language-html">  ...
+        <pre><code class="language-html">  ...
   &lt;script src="script.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
@@ -52,8 +50,8 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Wir haben dir deshalb bereits zwei Dateien erstellt <span class="is-family-code">styles.css</span>, für die CSS-Styles, und <span class="is-family-code">script.js</span>, für den JavaScript-Code.
-            Beide Dateien liegen im selben Ordner wie <span class="is-family-code">index.html</span>.
+            Wir haben dir deshalb bereits zwei Dateien erstellt <code class="language-plaintext">styles.css</code>, für die CSS-Styles, und <code class="language-plaintext">script.js</code>, für den JavaScript-Code.
+            Beide Dateien liegen im selben Ordner wie <code class="language-plaintext">index.html</code>.
             <ol>
               <li>Binde die beiden Dateien ein.</li>
             </ol>

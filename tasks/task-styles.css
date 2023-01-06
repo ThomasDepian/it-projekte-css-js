@@ -1,5 +1,5 @@
 pre {
-    padding: 0;
+    padding: 0 !important;
 }
 
 p > code.hljs { display: inline; }

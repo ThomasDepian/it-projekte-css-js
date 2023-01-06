@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Schriftgrößen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -14,11 +24,19 @@
       </h1>
       <p class="block">
         Schriftgrößen kann man in verschiedenen Einheiten angeben.<br>
-        Entweder absolut, beispielsweise in Pixeln (px), oder relativ zu der Schriftgröße von anderen Elementen (em oder rem).<br>
-        Wollen wir beispielsweise sagen, dass alle h2-Überschriften 16px groß sind, so können wir dies so machen:
-        TODO: CODE
+        Entweder absolut, beispielsweise in Pixeln (<code class="language-plaintext">px</code>), oder relativ zu der Schriftgröße von anderen Elementen (<code class="language-plaintext">em</code> oder <code class="language-plaintext">rem</code>).
+        Wollen wir beispielsweise sagen, dass alle <code class="language-html">&lt;h2&gt;</code>-Überschriften <code class="language-plaintext">16px</code> groß sind, so können wir dies so machen:
+        <pre>
+<code class="language-css">h2 {
+  font-size: 16px;
+}
+</code></pre>
         Soll die Schriftgröße jedoch doppelt so groß sein wie bisher, schreiben wir:
-        TODO: CODE
+        <pre>
+<code class="language-css">h2 {
+  font-size: 2em;
+}
+</code></pre>
       </p>
     </div>
   </section>
@@ -26,8 +44,10 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Standardmäßig, das heißt im gesamten "body" deines HTML-Dokumentes, soll die Schriftgröße 16 Pixel betragen.
-            Der Titel (h1), soll sieben mal so groß werden, alle Überschriften zweiten Grades (h2) doppelt so groß.
+          <ol>
+            <li>Standardmäßig, das heißt im gesamten <code class="language-html">&lt;body&gt;</code> deines HTML-Dokumentes, soll die Schriftgröße 16 Pixel betragen.</li>
+            <li>Der Titel (<code class="language-html">&lt;h1&gt;</code>), soll sieben mal so groß werden, alle Überschriften zweiten Grades (<code class="language-html">&lt;h2&gt;</code>) doppelt so groß.</li>
+          </ol>
         </p>
     </div>
   </section>
