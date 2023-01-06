@@ -5,21 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ränder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
         Ränder
       </h1>
       <p class="block">
-        Nochmal zurück zum Box-Model.<br>
-        Zwischen dem Abstand "nach außen" und jenem "nach innen" kann man noch den Rand, den sog. border festlegen.
-        Dies machst du so TODO.
+        Nochmal zurück zum Box-Model.
+        Zwischen dem Abstand "nach außen" und jenem "nach innen" kann man noch den Rand, den sogenannten <code class="language-css">border</code>, festlegen.
+        Dies machst du so:
+        <pre>
+<code class="language-css">div {
+  border: 2px solid red;
+}
+</code></pre>
         Das erste Argument legt die dicke des Randes fest, hier 2 Pixel.
-        Das zweite Argument legt die Art des Randes fest. solid steht hier für eine durchgezogene Linie, "dashed" beispielsweise für eine strichlierte Linie.
+        Das zweite Argument legt die Art des Randes fest. <code class="language-css">solid</code> steht hier für eine durchgezogene Linie, <code class="language-css">dashed</code> beispielsweise für eine strichlierte Linie.
         Mit dem dritten Argument legst du die Farbe fest. Dies kennen wir bereits von der Hintergrundfarbe oder auch der Textfarbe.
-        TODO SHOWCASE
       </p>
     </div>
   </section>
@@ -27,8 +41,10 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Der Absatz zur Zubereitung der Pizza (wieder ohne dem Bild), soll einen Rand von einem Pixel aufweisen.
-            Dieser soll des Weiteren strichliert und in schwarz sein.
+          <ol>
+            <li>Der Absatz zur Zubereitung der Pizza (wieder ohne dem Bild), soll einen Rand von einem Pixel aufweisen.</li>
+            <li> Dieser soll des Weiteren strichliert (<code class="language-css">dashed</code>) und in schwarz (<code class="language-css">black</code>) sein.</li>
+          </ol>
         </p>
     </div>
   </section>
