@@ -5,32 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS: If-Abfragen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
         JS: If-Abfragen
       </h1>
       <p class="block">
-        Zu guter Letzt wollen wir uns noch mit if-Abfragen befassen.
+        Zu guter Letzt wollen wir uns noch mit <code class="language-javascript">if</code>-Abfragen befassen.
         Diese haben folgende Struktur.
-        TODO CODE
-        Der Code innerhalb der runden Klammern TODO wird als <em>Bedingung</em> bezeichnet.
+        <pre>
+<code class="language-javascript">if (es ist heute sonning) {
+  ich gehe heute an den Strand
+} else {
+  ich gehe heute ins Schwimmbad
+}
+</code></pre>
+        Der Code innerhalb der runden Klammern <code class="language-javascript">(es ist heute sonning)</code> wird als <em>Bedingung</em> bezeichnet.
         Ist diese Bedingung war, wir der Code im ersten Block ausgeführt, ansonsten jener im zweiten Block.
         Das bedeutet, falls es heute sonnig ist, gehe ich an den Strand, sonst in das Schwimmbad.
-        Diese if-Abfragen erlauben uns auf unterschiedliche Ereignisse, beispielsweise der Eingabe einer Besucherin oder eines Besuchers deiner Webseite, jeweils angemessen zu reagieren.
-        <strong>Tipp:</strong> Falls du im "sonst"-Fall keinen Code ausführen möchstest, kannst du den Block auch komplett weglassen:
-        TODO
+        Diese <code class="language-javascript">if</code>-Abfragen erlauben uns auf unterschiedliche Ereignisse, beispielsweise der Eingabe einer Besucherin oder eines Besuchers deiner Webseite, jeweils angemessen zu reagieren.<br>
+        <strong>Tipp:</strong> Falls du im "sonst"-Fall keinen Code ausführen möchtest, kannst du den Block auch komplett weglassen:
+        <pre>
+<code class="language-javascript">if (es ist heute sonning) {
+  ich gehe heute an den Strand
+}
+</code></pre>
       </p>
       <p class="block">
         Wir haben bereits viele Selektoren kennengelernt.
         Dies ist nun der dritte, und letzte, Selektor den wir uns gemeinsam anschauen.
-        Mit dem Selektor TODO kannst du Elemente anhand des Namens "name" auswählen.
-        Jedoch handelt es sich hier nicht um den Namen des Tags, bspw. div oder p, sondern um den Namen des Eingabefeldes.
-        Wie du in der HTML Datei sehen kannst, hat (fast) jedes Eingabefeld einen Namen.
+        Mit dem Selektor <code class="language-javascript">document.getElementsByName()</code> kannst du Elemente anhand des Namens  auswählen.
+        Jedoch handelt es sich hier nicht um den Namen des Tags, bspw. <code class="language-html">&lt;div&gt;</code> oder <code class="language-html">&lt;p&gt;</code>,
+        sondern um den Namen des Eingabefeldes.
+        Wie du in der HTML Datei sehen kannst, hat (fast) jedes Eingabefeld einen Namen (Attribut <code class="language-html">name</code>; <code class="language-html">&lt;input name="hallo"&gt;</code>).
         Dies ist wichtig, damit du später die Eingabe auch zum Feld zuordnen kannst.
-        Wir können aber auch in JS Elemente anhand des Namens, z.B. "geschlecht", selektieren:
+        Wir können aber auch in JavaScript Elemente anhand des Namens, z.B. <code class="language-html">geschlecht</code>, selektieren:
+        <pre><code class="language-javascript">let elemente = document.getElementsByName("geschlecht");</code></pre>
       </p>
     </div>
   </section>
@@ -38,16 +60,28 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Wähle die Radiobuttons anhand des name-Attributs aus.
-            Das name-Attribut hat den Wert "käse".
-            Finde heraus, welches der beiden Radiobuttons ausgewählt ist.
-            Dies kannst du entweder mit einer Schleife machen, oder indem du explizit den ersten bzw. zweiten Radiobutton auswählst.
-            <strong>Tipp:</strong> Mit dem Status ".checked" kannst du abfragen, ob ein Radiobutton ausgewählt ist. Und mit [0] und [1] kannst du auf das erste und zweite Element einer Liste zugreifen.
-            Je nachdem welcher Radiobutton ausgewählt ist, hänge bitte hinten an die Zutatenliste "mit Käse" oder "ohne Käse" an.
-            <strong>Tipp:</strong> Du kannst mit der Eigenschaft ".value" den Wert des ausgewählten Radiobuttons abfragen.
-            Der ist bereits "mit Käse" oder "ohne Käse".
-            <strong>Bonus:</strong> Falls kein Namen für die Pizza eingegeben wurde, so füge das erstellte p-Element nicht zum HTML Dokument hinzu, sondern gib eine Warnung aus.
-            Die Anzahl der Zeichen in einem String kannst du mit ".length" abfragen und eine Warnung mit dem Text "Achtung" gibst du mit alert("Achtung") aus.
+          <ol>
+            <li>
+              Wähle die Radiobuttons anhand des <code class="language-html">name</code>-Attributs aus.
+              Das name-Attribut hat den Wert <code class="language-plaintext">käse</code>.
+            </li>
+            <li>
+              Finde heraus, welches der beiden Radiobuttons ausgewählt ist.
+              Dies kannst du entweder mit einer Schleife machen, oder indem du explizit den ersten bzw. zweiten Radiobutton auswählst.
+              Mit dem Status <code class="language-javascript">.checked</code> kannst du abfragen, ob ein Radiobutton ausgewählt ist.
+              Je nachdem welcher Radiobutton ausgewählt ist, hänge bitte hinten an die Zutatenliste <code class="language-plaintext">mit Käse</code>
+               oder <code class="language-plaintext">ohne Käse</code> an.
+            </li>
+          </ol>
+          <strong>Tipp:</strong> Mit <code class="language-javascript">[0]</code> und <code class="language-javascript">[1]</code> 
+          kannst du auf das erste und zweite Element einer Liste zugreifen.<br>
+          <strong>Tipp:</strong> Du kannst mit der Eigenschaft <code class="language-javascript">.value</code> den Wert des ausgewählten Radiobuttons abfragen.
+          Der ist bereits <code class="language-plaintext">mit Käse</code> oder <code class="language-plaintext">ohne Käse</code>.<br>
+          <strong>Bonus:</strong> Falls kein Namen für die Pizza eingegeben wurde,
+          so füge das erstellte <code class="language-html">&lt;p&gt;</code>-Element <em>nicht</em> zum HTML Dokument hinzu,
+          sondern gib eine Warnung aus.
+          Die Anzahl der Zeichen in einem String kannst du mit <code class="language-javascript">.length</code> 
+          abfragen und eine Warnung mit dem Text <code class="language-plaintext">Achtung</code> gibst du mit <code class="language-javascript">alert("Achtung")</code> aus.
       </p>
     </div>
   </section>
