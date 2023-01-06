@@ -1,0 +1,125 @@
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgba(109,76,65, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 7em;
+    color: white;
+}
+
+
+h2 {
+    margin-top: 0;
+    padding-top: 1em;
+    font-size: 2em;
+}
+
+section {
+    padding: 1em 3em 5em 3em;
+}
+
+section#title {
+    padding: 0;
+    height: 100vh;
+    
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/11/03/13/food-3309419_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+section#zubereitung {
+    background-color: aliceblue;
+}
+
+section#fakten {
+    background-color: #f8fff6;
+}
+
+section#pizza-erstellen {
+    background-color: rgba(245,128,146, 0.1);
+}
+
+p.info {
+    text-align: justify;
+    border: 1px dashed black;
+    padding: 10px;
+}
+
+.info-block {
+    display: flex;
+}
+
+.info-block > div {
+    flex: 50%;
+}
+
+#pizza-ofen-div {
+    display: flex;
+}
+#pizza-ofen {
+    height: 75%;
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+    #pizza-ofen {
+        height: auto;
+    }
+}
+
+
+a.weitere-info {
+    color: initial;
+    text-decoration: underline;
+}
+a.weitere-info:hover {
+    font-weight: 900;
+}
+
+
+section#zuhause {
+    height: 100vh;
+}
+iframe#youtube-pizza-machen {
+    width: 100%;
+    height: 100%;
+  }
+
+
+.fakten-container {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    justify-items: center;
+}
+
+input#pizza-name {
+    width: 100%;
+}
+
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: .5em 3em;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 1em;
+}
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+  
