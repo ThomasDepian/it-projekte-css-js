@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS Schleifen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -17,10 +27,14 @@
         Dazu verwenden wir eine <strong>Schleife</strong>.
         Schleifen können dazu verwendet werden, gewissen Code mehrmals auszuführen.
         Ein typisches Beispiel wäre hierfür das Ausführen eines Codes für jedes Element einer Liste.
-        Schleifen sind folgendermaßen aufgebaut.
-        TODO Code
-        Mit TODO erstellen wir eine Variable.
-        Diese Variable wird im Laufe der Zeit jedes Element der Liste [1,5,10,0] genau einmal repräsentieren.
+        Es gibt in JavaScript viele verschiedene Arten Schleifen zu schreiben, aber jene, welche wir verwenden, sind folgendermaßen aufgebaut.
+        <pre>
+<code class="language-javascript">let summe = 0;
+for (const nummer of [1,5,10,0]) {
+  summe = summe + nummer;
+}
+</code></pre>
+        Die Variable <code class="language-javascript">nummer</code> wird im Laufe der Zeit jedes Element der Liste <code class="language-javascript">[1,5,10,0]</code> genau einmal repräsentieren.
         Man spricht hierbei auch von "über die Liste <em>iterieren</em>".
         In diesem Beispiel wird nur die Summe der Elemente gebildet; es kann jedoch jeder beliebige Code innerhalb der Schleife sein.
       </p>
@@ -29,19 +43,34 @@
         Variablen können von verschiedenen Datentypen sein, je nachdem was sie repräsentieren sollen.
         Beispiele hierfür sind Zahlen, oder Zeichenketten, sogenannte <strong>Strings</strong>.
         Wir werden in dieser und den folgenden Aufgaben viel mit Strings arbeiten.
-        Diese speichern Zeichenketten, also einfach Text und können so erstellt werden (achte auf die "").
-        Wie du oben sehen kannst, kann man auch zwei Strings mittels des + anneinander reihen, so wie wenn du zwei Zahlen addieren würdest.
+        Diese speichern Zeichenketten, also einfach Text und können so erstellt werden (achte auf die ""):
+        <pre>
+<code class="language-javascript">let string1 = "";
+let string2 = "hallo";
+let string3 = " welt";
+let string4 = string2 + string3;
+</code></pre>
+        Wie du sehen kannst, kann man auch zwei Strings mittels des <code class="language-javascript">+</code> aneinander reihen, so wie wenn du zwei Zahlen addieren würdest.
       </p>
       <p class="block">
-        Eine weitere Möglichkeit etwas zu selektieren ist mittels CSS-Selektoren.
+        In der vorherigen Aufgabe hast bereits eine Art gelernt, wie man HTML-Elemente von JavaScript aus ansprechen kann.
+        Schauen wir uns eine weitere Möglichkeit an.
         Du hast im CSS-Teil schon einige Selektoren geschrieben, welche gewisse Elemente auswählen und ihr Aussehen verändern.
-        Dies wäre beispielsweise ein Selektor, der alle h2-Überschriften mit der Klasse "untertitel" auswählt.
-        TODO CODE
-        Mit dem Selektor TODO kannst du solche CSS Selektoren auch in JS verwenden.
+        Dies wäre beispielsweise ein Selektor, der alle <code class="language-html">&lt;h2&gt;</code>-Überschriften mit der Klasse <code class="language-plaintext">untertitel</code> auswählt.
+        <pre>
+<code class="language-css">h2.untertitel {}
+</code></pre>
+        Mit der Funktion <code class="language-javascript">document.querySelectorAll()</code> kannst du solche CSS Selektoren auch in JavaScript verwenden.
         Dieser Befehl wählt alle Elemente aus, welche in dieses Muster fallen.
-        Dies können, im Gegensatz zu TODO, auch mehrere sein.
+        Dies können, im Gegensatz zu <code class="language-javascript">document.getElementById()</code>, auch mehrere sein.
         Deshalb wird dir auch eine Liste mit Elementen zurückgegeben, über welche du dann mit einer Schleife iterieren kannst.
         Der Code für den oben angegebenen CSS-Selektor würde so ausschauen.
+        <pre>
+<code class="language-javascript">let elemente = document.querySelectorAll('h2.untertitel');;
+for (const element of elemente) {
+  // code
+}
+</code></pre>
       </p>
     </div>
   </section>
@@ -49,14 +78,23 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Erstelle eine Textvariable zutaten.
-            Selektiere von der Webseite alle Checkboxen die ausgewählt (markiert) wurden. Dies kannst du mittels input[type=checkbox]:checked machen.
-            Speicher dir diese Elemente in der Variable zutatenBoxen.
-            Für jedes dieser Elemente in zutatenBoxen, hänge deren Namen an den String zutaten dran.
-            Auf den Namen der Zutat zutat kannst du mittels zutat.name zugreifen.
-            Zwischen den Strings kannst du jeweils die Zeichenkette ", " dazuhängen, damit es leserlich bleibt.
-            Bisher wurde ja beim Klick auf den Knopf der Titel der Pizza ausgegeben.
-            Nun soll "Pizza NAME; Zutaten: ZUTATEN." ausgegeben werden.
+          <ol>
+            <li>Erstelle eine Textvariable <code class="language-javascript">zutaten</code>.</li>
+            <li>
+              Selektiere von der Webseite alle Checkboxen (<code class="language-html">&lt;input type="checkbox"&gt;</code>) die ausgewählt (markiert) wurden. 
+              Dies kannst du mittels <code class="language-css">input[type=checkbox]:checked</code> machen.
+              Speicher dir diese Elemente in der Variable <code class="language-javascript">zutatenBoxen</code>.
+            </li>
+            <li>
+              Für jedes dieser Elemente in <code class="language-javascript">zutatenBoxen</code>, hänge deren Namen an den String <code class="language-javascript">zutaten</code> dran.
+              Auf den Namen der Zutat <code class="language-javascript">zutat</code> kannst du mittels <code class="language-javascript">zutat.name</code> zugreifen.
+              Zwischen den Strings kannst du jeweils die Zeichenkette <code class="language-javascript">", "</code> dazuhängen, damit es leserlich bleibt.
+            </li>
+            <li>
+              Bisher wurde ja beim Klick auf den Knopf <code class="language-plaintext">Speichern</code> der Titel der Pizza ausgegeben.
+              Nun soll <code class="language-javascript">"Pizza [NAME DER PIZZA]; Zutaten: [INHALT DER VARIABLE zutaten]."</code> ausgegeben werden.
+            </li>
+          </ol>
       </p>
     </div>
   </section>
