@@ -1,5 +1,5 @@
 const NUM_STEPS = 18;
-const TASK_PATH = '/tasks';
+const TASK_PATH = '/it-projekte-css-js/tasks';
 const PAGE_TITLE = 'Meine Pizza-Seite | CSS + JS Kurs - Task'
 
 let currentStep = 1;
