@@ -5,30 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eine JS Funktion</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
         JS Funktionen
       </h1>
       <p class="block">
-        Wir werden im folgenden beim Erzeugen einer neuen Pizza JavaScript Code vom HTML-Datei aus aufrufen.
+        Wir werden im folgenden beim Erzeugen einer neuen Pizza <strong>JavaScript</strong> Code vom HTML-Datei aus aufrufen.
         Dafür erzeugen wir eine Funktion, welche später die Logik beinhaltet.
         Das können wir folgendermaßen machen.
-        TODO CODE
+        <pre>
+<code class="language-javascript">function meineErsteFunktion() {
+  // Code
+}
+</code></pre>
       </p>
       <p class="block">
         Events sind eine Möglichkeit um JS Funktionen von der HTMl-Datei aus aufrufen zu können.
         Ähnlich wie bei CSS, können auch hier gewisse Elemente auf spezielle Events reagieren, wie beispielsweise ein Button auf einen Mausklick.
-        Mit folgenden Code können wir dem Button sagen, dass beim Klick die Funktion "hallo" aufgerufen werden soll.
-        TODO CODE
+        Mit folgenden Code können wir dem Button (<code class="language-html">&lt;button&gt;</code>) sagen, dass beim Klick die Funktion <code class="language-javascript">hallo()</code> aufgerufen werden soll.
+        <pre><code class="language-html">&lt;button type="button" onclick="hallo()"&gt;Sag Hallo!&lt;/button&gt;</code></pre>
       </p>
       <p class="block">
-        Einige Elemente führen standardmäßig bspw. gewisse Operationen bei einem Klick durch. Unser Knopf von der HTML-Seite beispielsweise
-        würde die Form an eine von uns angegebene Adresse abschicken.
+        Einige Elemente führen standardmäßig bspw. gewisse Operationen bei einem Klick durch.
+        Unser Knopf von der HTML-Seite beispielsweise würde die Form an eine von uns angegebene Adresse abschicken.
         Wir wollen aber die Funktion mit JavaScript manipulieren.
-        Um diese Standardfunktionalität auszuschalten, können wir die Art des Knopfes von "submit" (= Abschicken) zu "button" ändern, wie hier dargestellt.
+        Um diese Standardfunktionalität auszuschalten, können wir die Art des Knopfes von <code class="language-html">type="submit"</code> (= Abschicken) zu <code class="language-html">type="button"</code> ändern, wie auch oben dargestellt.
       </p>
     </div>
   </section>
@@ -36,12 +50,14 @@
     <div class="container">
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
-            Erzeuge in der Datei script.js eine Funktion "neuePizza".
-            Diese Funktion soll beim Klick auf den Knopf "Speichern" aufgerufen werden.
-            Setze den Typ des Knopfes auf "button", damit die Form nicht abgeschickt wird.
-            
-            <strong>Tipp:</strong> Um zu testen, ob die Funktion funktiert, kannst du folgenden Code hineinkopieren.
-            TODO
+          <ol>
+            <li>
+              Erzeuge in der Datei <code class="language-plaintext">script.js</code> eine Funktion <code class="language-javascript">neuePizza()</code>.
+              Diese Funktion soll beim Klick auf den Knopf (<code class="language-html">&lt;button&gt;</code>) <code class="language-plaintext">Speichern</code> aufgerufen werden.
+            </li>
+            <li>Setze den Typ des Knopfes auf <code class="language-html">type="button"</code>, damit die Form nicht abgeschickt wird.</li>
+          </ol>
+          <strong>Tipp:</strong> Um zu testen, ob die Funktion funktioniert, kannst du folgenden Code hineinkopieren: <code class="language-javascript">alert("Funktioniert!");</code>.
       </p>
     </div>
   </section>
