@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ende</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/stackoverflow-light.min.css">
+    <link rel="stylesheet" href="./task-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('code').forEach((el) => {
+          hljs.highlightElement(el);
+        });
+      });
+    </script>
   </head>
-  <body>
+  <body class="content">
   <section class="section px-3 py-2 pt-5">
     <div class="container">
       <h1 class="title is-3 mb-3">
@@ -21,7 +31,20 @@
       </p>
       <p class="block">
         Ansonsten können wir dir noch folgende, weiterführende, Interaktive Kurse empfehlen:
-        TODO
+        <ul>
+          <li>Für CSS (und HTML):</li>
+          <ul>
+            <li><a href="https://www.codecademy.com/learn/learn-css" target="_blank">Codecademy: Learn CSS</a></li>
+            <li><a href="https://www.learn-html.org/" target="_blank">learn-html.org (Nicht alle angegebenen Themen sind ausgearbeitet)</a></li>
+            <li><a href="http://flexboxfroggy.com/#de" target="_blank">Flexbox Froggy (Kurs speziell für den Umgang mit <code class="language-css">flex</code>-Containern)</a></li>
+            <li><a href="https://cssgridgarden.com/#de" target="_blank">Grid Garden (Kurs speziell für den Umgang mit Gridbox</a></li>
+          </ul>
+          <li>Für JavaScript (JS):</li>
+          <ul>
+            <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy: Learn JavaScript</a></li>
+            <li><a href="https://www.learn-js.org/" target="_blank">learn-js.org (Grundlegende und weiterführende Themen - Keine Registrierung!)</a></li>
+          </ul>
+        </ul>
       </p>
     </div>
   </section>
