@@ -30,7 +30,7 @@
       <p class="block">
         Was früher sehr aufwendig war, geht mittlerweile doch etwas leichter von der Hand mithilfe des <strong>Flexbox</strong> Layouts.
         Dies ermöglicht es dir, flexibler Sachen zu platzieren und kann mithilfe von <code class="language-css">display: flex;</code> aktiviert werden.
-        Ist ein Element nun <code class="language-css">flex</code>, kannst du die Elemente, welche sich direkt in diesem Befinden, die sogenannten Kinder, mit einfachen Befehlen herumschiebe.
+        Ist ein Element nun <code class="language-css">flex</code>, kannst du die Elemente, welche sich direkt in diesem Befinden, die sogenannten Kinder, mit einfachen Befehlen herumschieben.
         Das Element, welches <code class="language-css">flex</code> ist, nennt man häufig auch <em>Container</em>, da es die Kinder umschließt und diese sich innerhalb des Containers bewegen können.
         Als Analogie kannst du dir einen Schiffcontainer vorstellen, wo du festlegen kannst wie du die Ware darin stapelst.
       </p>
@@ -51,7 +51,7 @@
 <code class="language-css">div#container {
   display: flex;
 }
-div#container > .kind {
+p.kind {
   flex: 20%;
 }
 </code></pre>
@@ -66,14 +66,14 @@ div#container > .kind {
 <code class="language-css">div#container {
   display: flex;
 }
-div#container > div#mittig {
+div#mittig {
   margin: auto;
 }
 </code></pre>
         Es zentriert ein Element, hier <code class="language-html">&lt;div&gt;</code>, mittig im <code class="language-css">flex</code>-container.<br>
         <strong>Hinweis:</strong> <code class="language-html">&lt;div&gt;</code> sind besondere Elemente. Sie bringen für sich gesehen keinen Mehrwert zu HTML, da man sie auf der Webseite nicht sieht und sie keine eigene Funktion haben.
         Jedoch bringen sie Struktur in deine Webseite. Du kannst eines oder mehrere Elemente, wie beispielsweise einen Block Text, damit gruppieren und mittels CSS den Style des gesamten Blocks anpassen.
-        Es gibt auch noch span, welches die gleiche Wirkung wie <code class="language-html">&lt;div&gt;</code> hat. Während <code class="language-html">&lt;div&gt;</code> meist für größere Blöcke verwendet wird, verwendet man hingegen <code class="language-html">&lt;span&gt;</code> eher für einzelne Wörter.
+        Es gibt auch noch <code class="language-html">&lt;span&gt;</code>, welches die gleiche Wirkung wie <code class="language-html">&lt;div&gt;</code> hat. Während <code class="language-html">&lt;div&gt;</code> meist für größere Blöcke verwendet wird, verwendet man hingegen <code class="language-html">&lt;span&gt;</code> eher für einzelne Wörter.
       </p>
     </div>
   </section>
@@ -84,10 +84,10 @@ div#container > div#mittig {
           <ol>
             <li>
               In der <code class="language-html">&lt;section&gt;</code> zur Zubereitung findest du bereits eine korrekte Gruppierung der Elemente mittels <code class="language-html">&lt;div&gt;</code>.
-              Mache das äußerste <code class="language-html">&lt;div&gt;</code> in dieser Section zu einem <code class="language-css">flex</code>-container.
+              Mache das äußerste <code class="language-html">&lt;div&gt;</code> in dieser Section zu einem <code class="language-css">flex</code>-Container.
               Die beiden inneren <code class="language-html">&lt;div&gt;</code> sollen jeweils <code class="language-css">50%</code> des Platzes einnehmen.
             </li>
-            <li>Das <code class="language-html">&lt;div&gt;</code>, welches das Bild umschließt, soll auch zu einem <code class="language-css">flex</code>-container werden.
+            <li>Das <code class="language-html">&lt;div&gt;</code>, welches das Bild umschließt, soll auch zu einem <code class="language-css">flex</code>-Container werden.
               Zentriere mit dessen Hilfe das Bild des Pizzaofens.</li>
           </ol>
       </p>

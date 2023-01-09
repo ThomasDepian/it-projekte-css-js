@@ -37,9 +37,11 @@
         Um beispielsweise das Hintergrundbild mittig im Block zu platzieren, schreiben wir <code class="language-css">background-position: center;</code>. Anstatt <code class="language-css">center</code> können wir auch andere Werte, wie beispielsweise <code class="language-css">top</code> einsetzen.
         Falls das Hintergrundbild zu klein ist, um den gesamten Block auszufüllen, so können wir festlegen, dass es öfters nebeneinander gereiht werden soll, um den gesamten Block zu füllen.
         Dies wird bei uns nicht notwendig sein, und wir können dies mit <code class="language-css">background-repeat: no-repeat;</code> unterbinden.
-        Dies hat aber den Nachteil, dass das Hintergrundbild nicht den gesamten Block ausfüllt.
+        Dies hat aber den Nachteil, dass das Hintergrundbild unter Umständen nicht den gesamten Block ausfüllt.
         Wir können jedoch mit <code class="language-css">background-size: cover;</code> festlegen, dass das Bild so vergrößert werden soll, damit es den ganzen Block ausfüllt.<br>
         <strong>Beachte:</strong> Um das Bild nicht zu verzerren, werden die Seitenverhältnisse des Bildes beibehalten. Dies kann zur Folge haben, dass nicht das gesamte Bild sichtbar ist.
+      </p>
+      <p class="block">
         Folgender Code würde beispielsweise für das Element mit der ID <code class="language-plaintext">katzen</code> <a href="https://upload.wikimedia.org/wikipedia/commons/5/59/Seal-tortie.jpg" target="_blank">dieses</a> Hintergrundbild setzen.
         Dies bedeckt das gesamte Element, wird zentriert und nicht wiederholt.
         <pre>
@@ -58,7 +60,7 @@
         <h2 class="title is-4 mb-3">Deine Aufgabe:</h2>
         <p class="block">
           <ol>
-            <li>Bitte gib der Section, welche den Titel <code class="language-plaintext">Pizza</code> enthält, folgendes Hintergrundbild: <code class="language-plaintext">https://cdn.pixabay.com/photo/2018/04/11/03/13/food-3309419_960_720.jpg</code>.</li>
+            <li>Bitte gib der <code class="language-html">&lt;section&gt;</code>, welche den Titel <code class="language-plaintext">Pizza</code> enthält, folgendes Hintergrundbild: <code class="language-plaintext">https://cdn.pixabay.com/photo/2018/04/11/03/13/food-3309419_960_720.jpg</code>.</li>
             <li>Es soll dabei zentriert sein und das gesamte Element bedecken. Für <code class="language-css">background-repeat</code>, gebe bitte <code class="language-css">no-repeat</code> ein.</li>
             <li>Damit das Bild gut zur Geltung kommt, setze bitte noch <code class="language-css">padding</code> auf <code class="language-plaintext">0</code> in dieser Section.</li>
           </ol>

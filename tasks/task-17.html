@@ -33,7 +33,7 @@
 }
 </code></pre>
         Der Code innerhalb der runden Klammern <code class="language-javascript">(es ist heute sonning)</code> wird als <em>Bedingung</em> bezeichnet.
-        Ist diese Bedingung war, wir der Code im ersten Block ausgeführt, ansonsten jener im zweiten Block.
+        Ist diese Bedingung wahr, wird der Code im ersten Block ausgeführt, ansonsten jener im zweiten Block.
         Das bedeutet, falls es heute sonnig ist, gehe ich an den Strand, sonst in das Schwimmbad.
         Diese <code class="language-javascript">if</code>-Abfragen erlauben uns auf unterschiedliche Ereignisse, beispielsweise der Eingabe einer Besucherin oder eines Besuchers deiner Webseite, jeweils angemessen zu reagieren.<br>
         <strong>Tipp:</strong> Falls du im "sonst"-Fall keinen Code ausführen möchtest, kannst du den Block auch komplett weglassen:
@@ -53,6 +53,7 @@
         Dies ist wichtig, damit du später die Eingabe auch zum Feld zuordnen kannst.
         Wir können aber auch in JavaScript Elemente anhand des Namens, z.B. <code class="language-html">geschlecht</code>, selektieren:
         <pre><code class="language-javascript">let elemente = document.getElementsByName("geschlecht");</code></pre>
+        Da es mehrere Elemente mit dem gleichen Namen geben kann, beispielsweise bei Radio Buttons, wird dir wieder eine Liste zurückgegeben.
       </p>
     </div>
   </section>

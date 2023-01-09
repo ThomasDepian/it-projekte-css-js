@@ -27,7 +27,7 @@
         Dazu gehören unter anderem die Ausrichtung des Textes und die Schriftart.
       </p>
       <p class="block">
-        Die <strong>Textausrichtung</strong> kannst du mittels <code class="language-html">&lt;h1&gt;</code> ändern.
+        Die <strong>Textausrichtung</strong> kannst du mittels <code class="language-css">text-align</code> ändern.
         <p style="text-align: left;">
           Normalerweise ist der Text linksbündig ausgerichtet, wie dieser hier. Dies kannst du mittels <code class="language-css">text-align: left;</code> machen.
         </p>
@@ -40,7 +40,7 @@
           Dies geschieht mittels <code class="language-css">text-align: justify;</code>.
         </p>
         <p style="text-align: center;">
-          Überschriften hingegen sind oft in der Mitte der Seite bzw. des Blockes, zentriert.<br>
+          Überschriften hingegen sind oft in der Mitte der Seite bzw. des Blockes zentriert.<br>
           Um alle <code class="language-html">&lt;h2&gt;</code>-Überschriften zu zentrieren, so schreibe beispielsweise folgendes.
         </p>
         <pre>
@@ -52,8 +52,8 @@
       <p class="block">
         Du kannst auch die <strong>Schriftart</strong> selber bestimmen.<br>
         <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> beispielsweise bietet eine Vielzahl an Schriftarten an, welche du in deiner Webseite einbinden kannst.
-        Hierfür einfach auf der Übersichtsseite eine Schriftart auswählen, beispielsweise Lato, auswählen.
-        Wenn du nach unten Scrolls siehst du eine Vorschau der Schriftart, mit all den angeboten Stilen.
+        Hierfür einfach auf der Übersichtsseite eine Schriftart auswählen, beispielsweise Lato.
+        Wenn du nach unten scrollst siehst du eine Vorschau der Schriftart, mit all den angeboten Stilen.
         <code class="language-plaintext">thin</code> oder <code class="language-plaintext">light</code> sind dünnere Schriftdicken (oder auch Stile genannt) dieser Schriftart,
         <code class="language-plaintext">regular</code> ist der Standard 
         und <code class="language-plaintext">bold</code> oder <code class="language-plaintext">black</code> sind die dickeren Stile.
@@ -80,11 +80,11 @@
   &lt;link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"&gt;
 &lt;/head&gt;
 </code></pre>
-        Willst du dann auf ein Element, beispielsweise einen Absatz, eine andere Schriftart anwenden, so musst du nur den Code, welcher dir weiter unten von Google angezeigt wird,
+        Willst du dann auf ein Element, beispielsweise einen Absatz, eine andere Schriftart anwenden, so musst du nur den Code, welcher dir weiter unten auf der Google Fonts-Seite angezeigt wird,
         bei der von dir gewünschten CSS-Regel angeben.
-        Beispielsweise so.
+        Beispielsweise so:
         <pre>
-<code class="language-css">p {
+<code class="language-css">p#andere-font {
   font-family: 'Lato', sans-serif;
 }
 </code></pre>
